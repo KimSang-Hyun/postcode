@@ -34,7 +34,7 @@
       }
 
       function postMessageToiOS(postData) {
-        window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+        window.webkit.messageHandlers.sendPostCode.postMessage(postData);
       }
 
       var element_layer = document.getElementById("layer");
@@ -55,7 +55,7 @@
               zonecode: data.zonecode,
             };
             
-            console.log(data)
+            console.log("postData" + postData)
             window.postMessageToiOS(postData);
           },
           width: "100%",
